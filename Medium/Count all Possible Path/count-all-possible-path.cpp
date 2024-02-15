@@ -21,6 +21,16 @@ public:
 	    }
 	    return true;
 	}
+Yes, 
+exactly! In an undirected graph represented by an adjacency matrix, each row corresponds to a vertex, 
+and the number of entries (connections) in each row represents 
+the degree of that vertex. For the graph to have an Eulerian circuit, every vertex must have an even degree.
+
+
+So, in short, if each row (or layer) in the adjacency matrix contains an even number of connections (non-zero entries), 
+then the graph has the potential to be an Eulerian circuit. This condition ensures that every vertex has an even degree, 
+which is a necessary condition for the existence of an Eulerian circuit. 
+              If any vertex has an odd degree, the graph cannot have an Eulerian circuit.
 
 };
 
