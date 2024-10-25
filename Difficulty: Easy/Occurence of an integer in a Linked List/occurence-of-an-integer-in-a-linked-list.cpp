@@ -31,16 +31,19 @@ class Solution {
   public:
     int count(struct Node* head, int key) {
         // add your code here
-        Node*start=head;
         int cnt=0;
         
-        while(start!=NULL){
-            if(start->data==key)
-                cnt++;
-            
-            start=start->next;
+        Node*tmp=head;
+        
+        while(tmp){
+            int val=tmp->data;
+            if(val==key)
+              cnt++;
+              
+            tmp=tmp->next;
         }
         return cnt;
+        
     }
 };
 
@@ -70,6 +73,7 @@ int main() {
         cin.ignore();
         Solution ob;
         cout << ob.count(head, key) << endl;
+        cout << "~" << endl;
     }
     return 0;
 }
